@@ -1,0 +1,18 @@
+
+<div class="container">
+    <div id='content'>
+        <div class="chatMsg" *ngFor='let el of resData.data; trackBy: trackByFn'>
+            <div class="wrapper">
+                <span class="name">{{el.name}}</span>
+                <span class="message">{{el.message}}</span>
+            </div>
+            <span class="time">{{el.timestamp | date:'HH:MM a'}}</span>
+        </div>
+    </div>
+    <div class="slideControlscontainer">
+      <button (click)="play()">play</button>
+      <button (click)="pause()">pause</button>
+      <button (click)="stop()">stop</button>
+        <input type="range" min="1" max="100" value='{{rangeVal}}' class="slider" #range (input)="rangeSlider(range.value)" id="myRange">
+    </div>
+</div>

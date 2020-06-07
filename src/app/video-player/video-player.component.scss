@@ -1,0 +1,66 @@
+.container{
+    width: 600px;
+    margin: 0 auto;
+    background: #f9f9f9;
+    position: relative;
+    padding: 10px 0;
+
+    .slideControlscontainer {
+        width: 100%;
+
+        input[type=range]{
+            display: block;
+            width: 100%;
+            padding: 10px 0;
+        }
+      }
+      #content{
+        background: #f9f9f9;
+        width: 100%;
+        height: 400px;
+        overflow: auto;
+        padding: 15px;
+        box-sizing: border-box;
+        pointer-events: none;
+        align-items: flex-end;
+        display: flex;
+        flex-direction: column;
+
+        &::-webkit-scrollbar {
+            display: none;
+        }
+      }
+      
+      button{
+          background: #ddd;
+          width: 100px;
+          padding: 10px;
+          text-transform: capitalize;
+          border: 0;
+          cursor: pointer;
+          margin: 0 10px;
+      }
+      .chatMsg{
+        text-align: right;
+        .wrapper{
+            width: auto;
+            padding: 10px;
+            margin: 10px 0;
+            background: #cfe9f1;
+            border-radius: 5px 5px 0px 5px;
+        }
+
+        span{
+            text-transform: capitalize;
+            display: block;
+            margin: 2px 0;
+        }
+
+        .name{
+            font-size: 13px;
+        }
+        .time{
+            font-size: 12px;
+        }
+      }
+}
